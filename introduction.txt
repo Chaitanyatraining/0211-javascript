@@ -1,0 +1,23 @@
+HTML - Designing a page.
+CSS - styling a page.
+
+Javascript - user Interaction.
+
+- Js is a scripting language.
+- Js is lightWeight.
+- Js is a Interpreted, just-in-time compiled programming language.
+- It is a prototype, single threaded dynamic language that supports functional 
+programming, structural programming, object oriented programming.
+
+ => loosely coupled language & strictly coupled language
+  - js is a loosely coupled language.
+
+brendan eich
+he also build mozilla firefox
+MDN - 
+
+
+Javascript uses V8 engine
+MEAN -
+MERN - 
+
