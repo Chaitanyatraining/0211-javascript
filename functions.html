@@ -80,15 +80,19 @@
 
         // nested function
         
-        function parentfunction() {
+        function parentfunction(num1, num2) {
+            let val = 45;
             console.log('parent funciton')
+
             function childFunction() {
+                let val1 = 50;
+                console.log('num1', num1)
                 console.log('child function')
             }
             childFunction()
         }
 
-        parentfunction()
+        parentfunction(1,2)
         // childFunction()
 
     </script>
