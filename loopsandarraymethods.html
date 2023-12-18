@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>loops and array methods</title>
+</head>
+<body>
+    <h2>advanced loops</h2>
+    <script>
+        // for(let i=0; i<=5; i++){
+        //     confirm.log(i)
+        // }
+
+        const fruits = ['apple', 'orange', 'mango', 'pineapple']
+        
+        // for-of loop
+
+        // for(let item of fruits.entries()){
+        //     const [i, ele] = item
+        //     console.log(ele)
+        // }
+
+
+        //for-in loop
+        const person = {
+            name: "peter",
+            age: 25,
+            job: "engineer",
+            city: "bangalore",
+        }
+
+        for(let key in person){
+            console.log(person[key])
+        }
+
+        // forEach
+        let nums = [10,20,30,40,50,60,70]
+        /*
+            syntax
+            array.forEach(function(current element, index, array){
+                //code to execute
+            })
+        */
+
+        // const res = [];
+        // nums.forEach((ele, i, arr)=>{
+        //     res.push(ele * 2)
+        // })
+        // console.log(res)
+
+        // map method
+        /*
+            syntax:
+            let variable_name = array.map((currentElement, index, array)=>{
+                //code to execute
+            })
+        */
+       let mapRes = nums.map((item)=>(
+         item * 2
+       ))
+       console.log(mapRes)
+    </script>
+</body>
+</html>

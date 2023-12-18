@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced functions</title>
+</head>
+<body>
+    <h2>Advanced functions</h2>
+    <button>Click</button>
+    <script>
+        // first class function
+        //  js has a fundamental property called first class function. helps to write higher order functions
+
+        //js treates functions as first class citizens
+        // functions are treated as simple values
+
+        let x = 10;
+
+        let print = function(){}
+
+        const person = {
+            name: 'peter',
+            info: function(){}
+        }
+
+        // Higher order function- funciton that receives another function as an argument, that returns a new function.
+        
+        function add(a, b){
+            console.log('higher order function')
+            return function(){
+            }
+        }
+
+        add(2, function(){})
+
+        // callback function
+        const btn = document.querySelector('button')
+        btn.addEventListener('click', function(){
+            console.log('button was clicked')
+        })
+
+        //closures
+        function count(){
+            let counter = 0;
+
+             function greet(){
+                counter++;
+                console.log(counter)
+            }
+            greet()
+            
+        }
+
+        let a = count();
+        a()
+
+
+
+
+    </script>
+</body>
+</html>

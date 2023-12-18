@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring in javascript</title>
+</head>
+
+<body>
+    <h2>Destructuring in javascript</h2>
+    <script>
+        // Destructuring
+
+        //array destructuring
+        // let countries = ['India', ['srilanka', 'china'], 'canada', 'Japan', 'Russia']
+
+        // console.log(countries[2])
+
+        // const [item1, item2] = countries;
+
+        // console.log()
+
+        //object destructuring
+        const person = {
+            name: 'william',
+            father: 'johnson',
+            hobbies: ['reading', 'sports', 'travelling'],
+            friends: ["mark", "kyle", 'nick'],
+            age:25
+        }
+
+        // console.log(person.father)
+        const {age=45} = person
+        console.log(age)
+        // const {name, father, hobbies} = person
+        // console.log(name, father)
+        // console.log(hobbies)
+
+        //rename variables
+
+        const { name: firstName, father: parent } = person
+        console.log(firstName, parent)
+
+        //nested object
+        // const obj = {
+        //     a: 1,
+        //     b: {
+        //         c: 2,
+        //         d: 3
+        //     },
+        //     e: 4,
+        //     d: [1,2,3]
+        // }
+
+        // const { a, b: { c, d } } = obj
+
+        // console.log(c)
+
+        const userData = {
+            "id": 1,
+            "name": "Leanne Graham",
+            "username": "Bret",
+            "email": "Sincere@april.biz",
+            "address": {
+                "street": "Kulas Light",
+                "suite": "Apt. 556",
+                "city": "Gwenborough",
+                "zipcode": "92998-3874",
+                "geo": {
+                    "lat": "-37.3159",
+                    "lng": "81.1496"
+                }
+            }
+        }
+        const {address:{city, geo:{lat, lng}}} = userData;
+        console.log(lat, lng)
+
+        
+        //spread Operator(...)
+        // const countries = ["india", 'uk', 'italy', 'china', 'canada']
+        // const newList = [ ...countries, 'france', 'usa', 'england']
+
+        // console.log(newList)
+
+        // const fruits = ['mango', 'apple', 'orange', 'kiwi']
+        // const newfruits = fruits
+
+        // console.log('fruits-->', fruits)
+        // console.log('newfruits-->', newfruits)
+
+
+        //object
+//         const car = {
+//             name: 'mahindra',
+//             model: 'thar',
+//             color:'black'
+//         }
+//        console.log(car)
+//         const newcar = {...car}
+//         newcar.model= 'jeep'
+//         console.log(newcar)
+
+        //rest operator(...)
+            const countries = ["india", 'uk', 'italy', 'china', 'canada']
+            const [a,b, ...other] = countries;
+
+            console.log(other)
+            // 
+            const arr = [1,2,3,4,5]
+
+            function printNumbers(...list){ // rest operator
+                console.log(list)
+                for(let i = 0; i<=list.length; i++){
+                    console.log(i)
+                }
+            }
+            printNumbers(...arr) // spread operator
+    </script>
+</body>
+
+</html>

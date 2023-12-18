@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>primitive and reference</title>
+</head>
+<body>
+    <h2>primitive and reference</h2>
+    
+    <script>
+        // let a = 10;
+        // const b = a;
+
+        // a = 20;
+
+        // console.log(a, b)
+
+        let person = {
+            name : 'peter',
+            age: 25
+        }
+
+        let arr = [1,2,3,4]
+        let newArr = arr
+        arr.push(5)
+        console.log(arr)
+        console.log(newArr)
+
+        // let friend = person
+        // console.log(friend)
+        // console.log(person)
+
+        // shallow copy
+        const friend = Object.assign({}, person)
+        person.age = 30
+        console.log(person)
+        console.log(friend)
+
+        // JSON - javascript object notation
+
+        const car = {
+            brand: 'honda',
+            model:'city'
+        }
+        console.log(car)
+
+        const objStringify = JSON.stringify(car)
+        console.log(objStringify)
+        
+        console.log(JSON.parse(objStringify))
+
+    </script>
+</body>
+</html>

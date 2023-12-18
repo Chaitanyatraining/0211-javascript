@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scoping in javascript</title>
+</head>
+
+<body>
+    <h2>Scoping in Js</h2>
+    <script>
+        "use strict"
+        // strict mode
+        // const a = 10;  
+        // console.log(a)
+
+
+        /* execution context 
+            Execution context is made up of 
+                - variable emvironment
+                - scope chain
+                - this keyword
+    
+            scoping - variable organisation and accessed. where do variables live and where we 
+            can access and where not
+        */
+
+        //Global Scope
+        var a = 1;
+        let b = 2;
+        const c = 3;
+
+
+        // if(true){
+        //     console.log(a, b, c)
+        // }
+
+        function print() {
+            console.log(a, b, c)
+        }
+        print()
+
+
+        // function scope
+        function greet() {
+            var x = 10;
+            let y = 20;
+            const z = 30;
+
+            function printnums(){
+                console.log(x,y,z)
+            }
+            printnums()
+        }
+        console.log(x)
+
+
+        greet()
+
+        // block scope(es6)
+        if (true) {
+            var val1 = 5;
+            let val2 = 10;
+            const val3 = 15;
+        }
+        // console.log(val3) 
+
+        const firstName = "james"
+        function first() {
+            const age = 25;
+            if (age > 20) {
+                const decade = 2;
+                var millennial = true
+            }
+
+            function second() {
+                const job = "engineer"
+                console.log(`${firstName} is a ${age} - old ${job}`)
+                console.log(b)
+            }
+            second()
+        }
+
+        first()
+       
+
+    </script>
+</body>
+
+</html>

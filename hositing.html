@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting in js</title>
+</head>
+<body>
+    <h2>Hoisting in js</h2>
+    <script>
+        // debugger;
+        var a = 10;
+        // let b = 20;
+        greet()
+        function greet(){
+            console.log('greet')
+            console.log(this)
+
+        }
+        var y = 20
+        
+        // temporial dead zone(TMZ)
+        console.log(b)
+        let b = 20;
+        const c = 30;
+
+    </script>
+</body>
+</html>
