@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array methods</title>
+</head>
+<body>
+    <h2>array Methods</h2>
+    
+    <script>
+        //filter method
+        let nums = [10, 20, 30, 40, 50, 60]
+
+        let filRes = nums.filter((ele, index, arr) => {
+                return ele > 40
+        })
+        console.log(filRes)
+
+        //reduce
+        /* syntax: 
+            let <variable_name = array.reduce((accumulator, currentele, index, array) => {
+                //code to execute
+            }, initial value)
+        */ 
+
+        // const sum = nums.reduce((acc, item) => {
+        //     return acc + item
+        // }, 0)
+
+        // console.log(sum)
+
+        const fil = nums.reduce((acc, ele)=> {
+            if(ele > 40){
+                acc.push(ele)
+            }
+            return acc
+        }, [])
+        console.log(fil)
+
+        const keys = ['a', 'b', 'c']
+        let i = 1;
+
+        const obj = keys.reduce((acc, item) => {
+            acc[item] = i
+            i++
+            return acc
+        }, {})
+
+        console.log(obj)
+
+        //find
+        const numbers = [10, 50, 17, 9, 20, 21]
+        const findres = numbers.find((ele) => ele > 15)
+        console.log(findres)
+
+        //findIndex
+        const findIndexRes = numbers.findIndex((ele) => ele > 15)
+        console.log(findIndexRes)
+
+        //some
+        const someRes = numbers.some((ele => ele > 15))
+        console.log(someRes)
+
+        //every
+        const everyRes = numbers.every((ele) => ele > 15)
+        console.log(everyRes)
+
+        //flat
+        const newarr = [[1, 2, 3], [4, 5, 6]]
+        const flatRes = newarr.flat()
+        console.log(flatRes)
+
+
+    </script>
+</body>
+</html>
