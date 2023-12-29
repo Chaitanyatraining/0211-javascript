@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>promises in javascript</title>
+</head>
+<body>
+    <h2>Promises in javascript</h2>
+    <!-- 
+        an object that is used as a placeholder for the future result of an
+        aynchronous operations.
+
+        //  A container for an asynchronous delivered value.
+
+        // A container for future value
+     -->
+
+     <script>
+        console.log('a')
+
+        setTimeout(() => {
+            console.log('b')
+        }, 0)
+
+        const promises = new Promise((resolve, reject) => {
+            if(Math.random() > 0.5){
+                resolve('i have won')
+            }
+            reject('i lost')
+        })
+
+        promises.then((success) => {
+            console.log('success', success)
+        })
+
+        promises.catch((err) => {
+            console.log('err', err)
+        })
+        console.log('c')
+
+        promises.finally(() => {
+            console.log('promises done')
+        })
+
+     </script>
+</body>
+</html>

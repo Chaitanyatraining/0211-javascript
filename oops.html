@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oops</title>
+</head>
+<body>
+    <!-- 
+        the 4 fundamental principles of oops
+            - abstraction - Ignoring or hiding details that do't matter, 
+                allowing us to get an overview of things.
+            - Encapsulation - keeping properties and methods private inside the class
+                they are not accessible from outside the class.
+            - inheritance - making all properties and methods of a certain class
+                available to a child class, formatting a hierarchical relationship between classes.
+            - polymorphism - a child class can overwrite a method inherited  form a parent class.
+     -->
+
+     <!-- 
+        there are three ways to achieve prototype inhertitance
+            - constructor function
+            - es6 class
+            - object.create method
+      -->
+      
+     <script>
+        // constructor funciton
+        function person(name, year){
+            this.firstName = name;
+            this.year = year;
+        }
+
+        const peter = new person('peter', 1995) //instance
+        console.log(peter)
+
+        const jessica = new person('jessica', 1996)
+        console.log(jessica)
+
+        // adding a method to constructor function prototype
+        person.prototype.calAge = function(){
+            console.log(2023 - this.year)
+        }
+
+        peter.calAge()
+        jessica.calAge()
+
+        //adding a property into the prototype
+        person.prototype.species = "homesepians"
+        console.log(peter)
+     </script>
+</body>
+</html>

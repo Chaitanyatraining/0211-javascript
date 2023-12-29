@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Async and Await</title>
+</head>
+<body>
+    <h2>Async and Await</h2>
+    <!-- 
+        Async and Await
+        - async makes a function return a promise
+        - await makes a function wait for a promise
+
+
+        - All the 3 are same except syntax difference
+        - promises have resolve and reject states
+        - async funciton always returns a promise
+        - await will take a promise and converts to actual result.
+     -->
+    
+    <script>
+        function step1(value, error){
+            return new Promise((resolve, reject) => {
+                if(!error){
+                    resolve(value + 10)
+                } else {
+                    reject('something went Wrong')
+                }
+            })
+        }
+
+        async function result(){
+            let result1 = await step1(10, false)
+            return result1
+        }
+
+        console.log(result())
+        // result().then((result) => console.log(result))
+    </script>
+</body>
+</html>
